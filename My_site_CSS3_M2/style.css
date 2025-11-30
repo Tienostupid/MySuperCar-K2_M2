@@ -1,0 +1,137 @@
+/* --- THIẾT LẬP CƠ BẢN --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333; /* Màu chữ đậm để pass WAVE contrast */
+}
+
+/* --- YÊU CẦU: SKIP LINK --- */
+/* Ẩn link, chỉ hiện khi focus */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px;
+    z-index: 100;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0; /* Hiện ra khi nhấn Tab */
+}
+
+/* Center header content */
+header {
+    text-align: center;
+    background-color: #2c3e50;
+    padding: 20px 0;
+}
+
+/* --- YÊU CẦU: COMMENT OUT LI STYLING --- */
+/* Đề bài bắt buộc viết rule này rồi comment lại */
+/* li {
+    list-style: none;
+    display: inline;
+} 
+*/
+
+/* --- YÊU CẦU: NAV DISPLAY & WIDTH --- */
+nav {
+    display: inline-block; /* Bắt buộc dùng inline-block */
+    width: 80%;            /* Bắt buộc width khoảng 80% */
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;      /* Căn nội dung bên trong sang trái */
+}
+
+/* Style cho danh sách link (vì đã bỏ style li nên phải style ul/a) */
+nav ul {
+    display: inline-block;
+    width: 85%;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #e74c3c; /* Đổi màu khi di chuột */
+}
+
+/* --- YÊU CẦU: DESCENDENT SELECTOR CHO ẢNH TRONG NAV --- */
+nav img {
+    width: 10%; /* Bắt buộc width khoảng 10% */
+    vertical-align: middle;
+}
+
+/* --- YÊU CẦU: GRID CLASS --- */
+.grid {
+    display: grid;
+    /* Bắt buộc: 2 cột, mỗi cột khoảng 40% */
+    grid-template-columns: 40% 40%; 
+    
+    /* Bắt buộc: Chỉnh justify, align, row-gap */
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 50px;
+    
+    margin: 40px 0;
+}
+
+/* Style cho phần chữ trong Grid */
+.grid-item {
+    padding: 10px;
+}
+
+/* --- YÊU CẦU: DESCENDENT SELECTOR CHO ẢNH TRONG GRID --- */
+.grid img {
+    width: 100%; /* Bắt buộc width 100% */
+    border: 4px solid #333;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- YÊU CẦU: FLEX CLASS --- */
+.flex {
+    display: flex;
+    /* Bắt buộc: Dùng flex-wrap và justify-content */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style ảnh trong flex để đẹp hơn (không bắt buộc nhưng nên có) */
+.flex img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+footer {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
